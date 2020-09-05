@@ -126,15 +126,16 @@
                     </excludes>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.0</version>
                 <configuration>
-                    <!-- not append assembly id in release file name -->
                     <appendAssemblyId>false</appendAssemblyId>
                     <descriptors>
-                        <!--打包的详细描述，需要配置额外文件-->
-                        <descriptor>src/assembly/assembly-descriptor.xml</descriptor>
+                        <descriptor>${basedir}/assembly.xml</descriptor> <!-- Assembly 描述符文件 -->
+                        <!-- <descriptor>src/main/assembly/assembly.xml</descriptor> -->
                     </descriptors>
                 </configuration>
                 <executions>
