@@ -107,25 +107,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <!--指定main入口-->
-                            <mainClass>cn.com.bluemoon.admin.web.WebAdminApplication</mainClass>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
-                        </manifest>
-                    </archive>
-                    <excludes>
-                        <include>*.xml</include>
-                        <include>*.yml</include>
-                        <include>*.json</include>
-                    </excludes>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
