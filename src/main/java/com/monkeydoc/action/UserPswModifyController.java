@@ -21,7 +21,7 @@ public class UserPswModifyController {
     public Responsemsg pswmodify(@RequestBody Message msg) throws IOException {
         Map<String ,Object> map = msg.getMap();
         UserBean userBean=null;
-        String loginfor= (String) map.get("tel");
+        String loginfor= "";
         String password= Security.encryptPwd((String)map.get("password"));
         String newpsw=Security.encryptPwd((String) map.get("newpassword"));
         String resu="";

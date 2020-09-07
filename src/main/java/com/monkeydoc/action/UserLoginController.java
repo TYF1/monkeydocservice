@@ -29,7 +29,7 @@ public class UserLoginController {
     public Responsemsg login(@RequestBody Message mes) throws IOException {
         Map<String ,Object> map = mes.getMap();
         String usrtoken=mes.getHeader();
-        String loginfor= (String) map.get("tel");
+        String loginfor= "";
         String password="";
         if (map.get("password")!=null) {
             password = Security.encryptPwd((String) map.get("password"));
