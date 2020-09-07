@@ -24,7 +24,6 @@
     <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
     <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
     <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
-    <script type="application/javascript" src="md5.js"></script>
 </head>
 <body>
 <div class="transparent LogoWrapper-sc-1duRon-1 dEKxIf"><a class="sc-1I1iYs-1 gXtlRg" href=#>
@@ -90,18 +89,18 @@
                 tishi9:'',
             },
             userInfo:{
-                password1:'',
-                password2:'',
-                phonenum:'',
-                name:'',
-                address:'',
+                password1:'751603s',
+                password2:'751603s',
+                phonenum:'18895136988',
+                name:'ty123',
+                address:'456456456',
                 sex: '',
-                email:'',
-                idcard:'',
+                email:'6488967@qq.com',
+                idcard:'640381199901093617',
                 checkbox:true,
                 notcheck:true,
                 logon_res:false,
-                username:'',
+                username:'ty123',
             },
         },
         methods:{
@@ -112,7 +111,7 @@
                 const usernameData=this.userInfo.username;
                 const idData=this.userInfo.idcard;
                 const emailData=this.userInfo.email;
-                axios.post("http://monkeydoc.liadrinz.cn/business/userLogon.action",{userName:usernameData,password:passwordData,tel:phoneData,email:emailData}).then(
+                axios.post("http://monkeydoc.liadrinz.cn/doc/auth/logon",{userName:usernameData,password:passwordData,tel:phoneData,email:emailData}).then(
                     res=>
                 {
                     console.log(res);
