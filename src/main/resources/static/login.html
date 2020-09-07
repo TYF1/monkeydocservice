@@ -171,7 +171,7 @@
         let val={
           token:this.userinfo.token,
         }
-        axios.post("http://localhost:8082/logiN",val,{headers:{token:this.userinfo.token}}).then(
+        axios.post("http://monkeydoc.liadrinz.cn/doc/auth/login",val,{headers:{token:this.userinfo.token}}).then(
                 res=>{
                   console.log(res)
                   if(res.headers.responsemsg=="login_succeed")
@@ -202,7 +202,7 @@
           email:this.userinfo.email,
           password:this.userinfo.password2,
         };
-        axios.post("http://localhost:8082/logiN",val).then(
+        axios.post("http://monkeydoc.liadrinz.cn/doc/auth/login",val).then(
                 res=>{
                   console.log(res)
           if(res.headers.responsemsg=="user_does_not_exists") {

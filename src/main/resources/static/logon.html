@@ -112,7 +112,7 @@
                 const usernameData=this.userInfo.username;
                 const idData=this.userInfo.idcard;
                 const emailData=this.userInfo.email;
-                axios.post("http://localhost:8082/logoN",{userName:usernameData,password:passwordData,tel:phoneData,email:emailData}).then(
+                axios.post("http://monkeydoc.liadrinz.cn/doc/auth/logon",{userName:usernameData,password:passwordData,tel:phoneData,email:emailData}).then(
                     res=>
                 {
                     console.log(res);
