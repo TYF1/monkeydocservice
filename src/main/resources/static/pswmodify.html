@@ -11,6 +11,9 @@
         #app{width: 360px;margin:100px auto;}
         body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",Helvetica,Tahoma,Arial,"Microsoft YaHei",微软雅黑,黑体,Heiti,sans-serif,SimSun,宋体,serif;background-color:#F7F7F7;}
         .tiShi{font-size: 12px;color:red;margin:0 0 10px 85px;left: 20px;}
+        @-webkit-keyframes izpGDa{from{-webkit-transform:translateX(-20px);-ms-transform:translateX(-20px);transform:translateX(-20px);opacity:0;}to{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);opacity:1;}}@keyframes izpGDa{from{-webkit-transform:translateX(-20px);-ms-transform:translateX(-20px);transform:translateX(-20px);opacity:0;}to{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);opacity:1;}}
+        .top{-webkit-animation:izpGDa 0.5s linear;animation:izpGDa 0.5s linear;}@media (max-width:700px){.top{-webkit-animation:none;animation:none;}}
+        .sm-button{left:9px;font-size:14px;color:#666;font-weight:400;min-width:52px;width:52px;padding:0;box-sizing: border-box;display: inline-block;border-radius: 2px;border-style: solid;background-color: #fff;text-align: center;text-decoration: none;cursor: pointer;transition: opacity 0.3s,border-color 0.3s;  border-width: 0;background-image: linear-gradient(#fdfdfd,#f8f8f8);box-shadow: 0 1px 1px 0 rgba(0,0,0,0.11);position: relative;height: 30px;line-height: 28px;}
         #btd{color: #fff;border-color: #41464b;background-image: linear-gradient( #41464b,#2c3033 );width: 100%;height: 40px;font-weight: 500;font-size: 14px;margin-top: 10px;}
         .input{border: none;width:75%;padding: 11px 10px;color: #41464b;font-size: 12px;vertical-align: top;height: 38px;line-height: 38px;position: relative;background: #fff;height: 30px;box-shadow: inset 0 1px 3px 0 #e5e5e5;box-sizing: border-box;border-radius: 2px;border: 1px solid #e5e5e5;left: 5px;}
         .agr_title{text-align: center;width: 100%;font-size: 25px;padding: 40px 0;margin-top: 20px; color: #222;}
@@ -29,7 +32,7 @@
     <span class="tiShi">{{ tishi2 }}</span><br>
     <label>新登录密码</label><input type="password" placeholder="请输入新密码" v-model="newpsw" class="input"><br>
     <span class="tiShi">{{ tishi3}}</span><br>
-    <button id="btd"  @click="post">确认修改密码</button>
+    <button id="btd" class="sm-button submit sc-1n784rm-0 lower"  @click="post">确认修改密码</button>
 </div>
 </body>
 <script>
@@ -75,7 +78,7 @@
                     newpassword:this.newpsw,
                     email:this.email,
                 };
-                axios.post("http://monkeydoc.liadrinz.cn/doc/pswmodify",val).then(
+                axios.post("http://175.24.78.181:8082/pswmodify",val).then(
                     res=>{
                         if(res.headers.responsemsg=="user_does_not_exists")
                             this.tishi1="用户不存在";

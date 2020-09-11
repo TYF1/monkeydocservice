@@ -111,7 +111,7 @@
                 const usernameData=this.userInfo.username;
                 const idData=this.userInfo.idcard;
                 const emailData=this.userInfo.email;
-                axios.post("http://monkeydoc.liadrinz.cn/doc/auth/logon",{userName:usernameData,password:passwordData,tel:phoneData,email:emailData}).then(
+                axios.post("http://175.24.78.181:8082/logoN",{userName:usernameData,password:passwordData,tel:phoneData,email:emailData}).then(
                     res=>
                 {
                     console.log(res);
@@ -284,7 +284,7 @@
                 this.thisAjax();
             },
             login(){
-                window.location.href='http://175.24.78.181:8081/Login';
+                window.location.href='login.html';
             },
         }
     })
